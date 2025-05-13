@@ -1,26 +1,28 @@
+from abc import ABC, abstractmethod
+from typing import List, Dict
 import requests
-from src.vacancy import Vacancy
 
 
-def get_vacancies_from_hh(keyword: str, max_count: int = 10) -> list[Vacancy]:
-    url = "https://api.hh.ru/vacancies"
-    params = {"text": keyword, "per_page": max_count, "page": 0}
-    response = requests.get(url, params=params)
-    response.raise_for_status()
+class AbstractAPI(ABC):
+    """Абстрактный класс API для получения вакансий"""
 
-    vacancies_data = response.json().get("items", [])
+    @abstractmethod
+    def get_vacancies(self, keyword: str) -> List[Dict]:
+        pass
 
-    vacancies = []
-    for item in vacancies_data:
-        name = item.get("name")
-        employer = item.get("employer", {}).get("name")
-        salary = item.get("salary")
-        salary_from = salary.get("from") if salary else None
-        salary_to = salary.get("to") if salary else None
-        currency = salary.get("currency") if salary else None
-        url = item.get("alternate_url")
 
-        vacancy = Vacancy(name, employer, salary_from, salary_to, currency, url)
-        vacancies.append(vacancy)
+class HeadHunterAPI(AbstractAPI):
+    """Класс для работы с HeadHunter API"""
 
-    return vacancies
+    BASE_URL = "https://api.hh.ru/vacancies"
+
+    def get_vacancies(self, keyword: str) -> List[Dict]:
+        params = {
+            "text": keyword,
+            "per_page": 50
+        }
+        response = requests.get(self.BASE_URL, params=params)
+        if response.status_code == 200:
+            return response.json().get("items", [])
+        print(f"Ошибка {response.status_code}: не удалось получить вакансии.")
+        return []

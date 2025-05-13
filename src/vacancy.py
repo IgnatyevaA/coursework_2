@@ -1,34 +1,28 @@
+from functools import total_ordering
+
+
+@total_ordering
 class Vacancy:
-    def __init__(self, title: str, company: str, salary_from: int = None,
-                 salary_to: int = None, currency: str = None, url: str = None):
+    """Класс представления вакансии"""
+
+    def __init__(self, title: str, url: str, salary: int | None, description: str):
         self.title = title
-        self.company = company
-        self.salary_from = salary_from
-        self.salary_to = salary_to
-        self.currency = currency
         self.url = url
+        self.salary = self.__validate_salary(salary)
+        self.description = description
 
-    def __str__(self):
-        return (f"{self.title} в компании {self.company}, "
-                f"{self.salary_from or 'N/A'} - {self.salary_to or 'N/A'} {self.currency or ''}\n{self.url}")
+    def __repr__(self):
+        return f"{self.title} ({self.salary} ₽)\n{self.url}"
 
-    def to_dict(self):
-        return {
-            "title": self.title,
-            "company": self.company,
-            "salary_from": self.salary_from,
-            "salary_to": self.salary_to,
-            "currency": self.currency,
-            "url": self.url
-        }
+    def __validate_salary(self, salary):
+        if salary is None:
+            return 0
+        if isinstance(salary, int) and salary >= 0:
+            return salary
+        raise ValueError("Зарплата должна быть положительным числом или None")
 
-    @classmethod
-    def from_hh(cls, data: dict):
-        return cls(
-            title=data.get("name"),
-            company=data.get("employer", {}).get("name"),
-            salary_from=(data.get("salary") or {}).get("from"),
-            salary_to=(data.get("salary") or {}).get("to"),
-            currency=(data.get("salary") or {}).get("currency"),
-            url=data.get("alternate_url")
-        )
+    def __lt__(self, other):
+        return self.salary < other.salary
+
+    def __eq__(self, other):
+        return self.salary == other.salary
