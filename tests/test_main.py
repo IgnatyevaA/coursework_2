@@ -1,23 +1,28 @@
 import json
-import os
-from main import get_vacancies_from_hh, save_vacancies_to_json
-
+from pathlib import Path
+from src.api import HeadHunterAPI
+from src.savers import JSONSaver
 
 def test_get_vacancies_from_hh():
-    vacancies = get_vacancies_from_hh("Python", 5)
+    api = HeadHunterAPI()
+    vacancies = api.get_vacancies("Python", 5)
     assert len(vacancies) == 5
-    assert vacancies[0].title
-    assert vacancies[0].company
+    assert hasattr(vacancies[0], "title")
+    assert hasattr(vacancies[0], "company")
 
-
-def test_save_vacancies_to_json(tmp_path):
+def test_save_vacancies_to_json(tmp_path: Path):
     test_file = tmp_path / "test_vacancies.json"
-    vacancies = get_vacancies_from_hh("Python", 2)
-    save_vacancies_to_json(vacancies, test_file)
+    api = HeadHunterAPI()
+    vacancies = api.get_vacancies("Python", 2)
+    saver = JSONSaver(str(test_file))
+    saver.save_vacancies(vacancies)
 
     assert test_file.exists()
 
-    with open(test_file, encoding="utf-8") as f:
+    with open(test_file, "r", encoding="utf-8") as f:
         data = json.load(f)
-        assert isinstance(data, list)
-        assert "title" in data[0]
+
+    assert isinstance(data, list)
+    assert len(data) == 2
+    assert "title" in data[0]
+    assert "company" in data[0]

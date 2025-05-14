@@ -1,4 +1,4 @@
-from src.api import get_vacancies_from_hh
+from src.api import HeadHunterAPI
 
 def test_get_vacancies_from_hh(monkeypatch):
     class MockResponse:
@@ -22,12 +22,14 @@ def test_get_vacancies_from_hh(monkeypatch):
 
     monkeypatch.setattr("requests.get", mock_get)
 
-    vacancies = get_vacancies_from_hh("Python", 1)
+    api = HeadHunterAPI()
+    vacancies = api.get_vacancies("Python", 1)
 
     assert len(vacancies) == 1
-    assert vacancies[0].title == "Python Developer"
-    assert vacancies[0].company == "Test Company"
-    assert vacancies[0].salary_from == 100000
-    assert vacancies[0].salary_to == 150000
-    assert vacancies[0].currency == "RUR"
-    assert vacancies[0].url == "http://example.com"
+    v = vacancies[0]
+    assert v.title == "Python Developer"
+    assert v.company == "Test Company"
+    assert v.salary_from == 100000
+    assert v.salary_to == 150000
+    assert v.currency == "RUR"
+    assert v.url == "http://example.com"

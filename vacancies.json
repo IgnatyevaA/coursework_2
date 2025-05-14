@@ -1,62 +1,162 @@
 [
-  {
-    "title": "Мобильный UI/UX дизайнер (Figma)",
-    "url": "https://hh.ru/vacancy/120428046",
-    "salary": 15000000,
-    "description": "Опыт работы с <highlighttext>дизайн</highlighttext>-системами и их разработка. Знание методик <highlighttext>Design</highlighttext> Thinking, User-Centered <highlighttext>Design</highlighttext>. Наличие успешного портфолио реализованных проектов..."
-  },
-  {
-    "title": "Графический дизайнер в ClickTV",
-    "url": "https://hh.ru/vacancy/120416238",
-    "salary": 10000000,
-    "description": "Умение системно работать с графикой, внимание к деталям. Хорошее чувство цвета, композиции и типографики. Владение Adobe Photoshop, Illustrator, After Effects..."
-  },
-  {
-    "title": "Графический Дизайнер в SAFIA (Junior)",
-    "url": "https://hh.ru/vacancy/120425409",
-    "salary": 5000000,
-    "description": "Опыт работы от 2 лет в сфере графического <highlighttext>дизайна</highlighttext>. Отличное владение Adobe Photoshop, Illustrator, CorelDraw. Креативное мышление и чувство стиля. "
-  },
-  {
-    "title": "Графический дизайнер / Бренд-дизайнер",
-    "url": "https://hh.ru/vacancy/120386780",
-    "salary": 500000,
-    "description": "Уверенное владение Figma, Adobe Photoshop, Illustrator. Опыт работы с наружной и печатной рекламой. Знание основ типографики, верстки, подготовки к печати. "
-  },
-  {
-    "title": "Администратор в свадебный салон",
-    "url": "https://hh.ru/vacancy/119932489",
-    "salary": 350000,
-    "description": "Ты любишь красоту, чувствуешь вкус к эстетике и получаешь удовольствие от общения с людьми? Тогда тебе к нам! "
-  },
-  {
-    "title": "Бизнес ассистент",
-    "url": "https://hh.ru/vacancy/119525411",
-    "salary": 300000,
-    "description": "Будет плюсом если: разбираешься в веб-<highlighttext>дизайне</highlighttext>, имеешь опыт найма людей и поиска подрядчиков, имеешь опыт работы в сфере химчистки."
-  },
-  {
-    "title": "Операционный директор/Территориальный управляющий",
-    "url": "https://hh.ru/vacancy/120421966",
-    "salary": 300000,
-    "description": "Опыт работы от 3 до 6 лет на аналогичной позиции. Глубокое понимание ресторанного бизнеса и его процессов. Навыки стратегического планирования..."
-  },
-  {
-    "title": "Сотрудник в полиграфию",
-    "url": "https://hh.ru/vacancy/119674579",
-    "salary": 170000,
-    "description": "Умение работать с Canva, Adobe Photoshop, Word, Excel."
-  },
-  {
-    "title": "Frontend разработчик (React.js + MobX)",
-    "url": "https://hh.ru/vacancy/120035938",
-    "salary": 150000,
-    "description": "Опыт работы с SSR (Next.js, например). Понимание принципов UI/UX <highlighttext>дизайна</highlighttext>. Владение английским на уровне чтения технической документации."
-  },
-  {
-    "title": "Frontend-разработчик",
-    "url": "https://hh.ru/vacancy/120380122",
-    "salary": 150000,
-    "description": "Навыки работы с современными UI-библиотеками (Material-UI, Ant <highlighttext>Design</highlighttext>). Опыт создания адаптивных интерфейсов и визуализации данных. Аналитический склад ума..."
-  }
+    {
+        "title": "Аналитик данных/Продуктовый аналитик/Data Scientist (Python)",
+        "company": "Яндекс",
+        "salary_from": 0,
+        "salary_to": 0,
+        "currency": "Не указано",
+        "url": "https://hh.ru/vacancy/120108943"
+    },
+    {
+        "title": "Менеджер по продажам",
+        "company": "QazaqMedia",
+        "salary_from": 300000,
+        "salary_to": 1800000,
+        "currency": "KZT",
+        "url": "https://hh.ru/vacancy/118794341"
+    },
+    {
+        "title": "Водитель в семью",
+        "company": "Amsterdam Boutiqe Hotel",
+        "salary_from": 500000,
+        "salary_to": 500000,
+        "currency": "KZT",
+        "url": "https://hh.ru/vacancy/120371145"
+    },
+    {
+        "title": "Ученик флориста",
+        "company": "Studio Nargiz balloons&Flowers",
+        "salary_from": 0,
+        "salary_to": 0,
+        "currency": "Не указано",
+        "url": "https://hh.ru/vacancy/119920638"
+    },
+    {
+        "title": "Менеджер по продажам (типография)",
+        "company": "Рост Развитие Решение",
+        "salary_from": 0,
+        "salary_to": 200000,
+        "currency": "RUR",
+        "url": "https://hh.ru/vacancy/119701561"
+    },
+    {
+        "title": "Менеджер по туризму",
+        "company": "Time Fly Travel",
+        "salary_from": 150000,
+        "salary_to": 1000000,
+        "currency": "KZT",
+        "url": "https://hh.ru/vacancy/120172804"
+    },
+    {
+        "title": "Флорист / Помощник флориста",
+        "company": "Great",
+        "salary_from": 100000,
+        "salary_to": 300000,
+        "currency": "KZT",
+        "url": "https://hh.ru/vacancy/120090804"
+    },
+    {
+        "title": "Менеджер чат-поддержки / оператор контакт-центра",
+        "company": "ВкусВилл",
+        "salary_from": 55000,
+        "salary_to": 75000,
+        "currency": "RUR",
+        "url": "https://hh.ru/vacancy/118692106"
+    },
+    {
+        "title": "Frontend Developer (React)",
+        "company": "MUK Computers",
+        "salary_from": 0,
+        "salary_to": 0,
+        "currency": "Не указано",
+        "url": "https://hh.ru/vacancy/120505276"
+    },
+    {
+        "title": "Администратор тестового центра (TCA)",
+        "company": "TOSHKENT ARXITEKTURA-QURILISH UNIVERSITETI",
+        "salary_from": 4000000,
+        "salary_to": 4000000,
+        "currency": "UZS",
+        "url": "https://hh.ru/vacancy/120414860"
+    },
+    {
+        "title": "Координатор оптовых продаж",
+        "company": "КазСтандарт Азия",
+        "salary_from": 230000,
+        "salary_to": 250000,
+        "currency": "KZT",
+        "url": "https://hh.ru/vacancy/120258192"
+    },
+    {
+        "title": "Бухгалтер",
+        "company": "БЕЛАЯ ТЕХНИКА",
+        "salary_from": 230000,
+        "salary_to": 230000,
+        "currency": "KZT",
+        "url": "https://hh.ru/vacancy/120165539"
+    },
+    {
+        "title": "Кладовщик в единственном числе",
+        "company": "CURADEN KZ (КУРАДЕН КЗ)",
+        "salary_from": 500000,
+        "salary_to": 0,
+        "currency": "KZT",
+        "url": "https://hh.ru/vacancy/120493406"
+    },
+    {
+        "title": "Водитель",
+        "company": "AB AND BA BUSINESS",
+        "salary_from": 5000000,
+        "salary_to": 7000000,
+        "currency": "UZS",
+        "url": "https://hh.ru/vacancy/120493780"
+    },
+    {
+        "title": "Бухгалтер кост-контроллер",
+        "company": "ДЕНХОЛМ-ЖОЛДАС",
+        "salary_from": 400000,
+        "salary_to": 0,
+        "currency": "KZT",
+        "url": "https://hh.ru/vacancy/120454733"
+    },
+    {
+        "title": "Manual QA Engineer",
+        "company": "Altenar",
+        "salary_from": 0,
+        "salary_to": 0,
+        "currency": "Не указано",
+        "url": "https://hh.ru/vacancy/120515657"
+    },
+    {
+        "title": "Manual QA Engineer",
+        "company": "Altenar",
+        "salary_from": 0,
+        "salary_to": 0,
+        "currency": "Не указано",
+        "url": "https://hh.ru/vacancy/120515658"
+    },
+    {
+        "title": "Юрист",
+        "company": "OIL RELOADING CORP",
+        "salary_from": 750000,
+        "salary_to": 1000000,
+        "currency": "KZT",
+        "url": "https://hh.ru/vacancy/120342229"
+    },
+    {
+        "title": "Senior/middle frontend разработчик в компанию",
+        "company": "TESTBOR",
+        "salary_from": 1500,
+        "salary_to": 2500,
+        "currency": "USD",
+        "url": "https://hh.ru/vacancy/120471944"
+    },
+    {
+        "title": "Администратор",
+        "company": "CHAMELEON",
+        "salary_from": 6000000,
+        "salary_to": 15000000,
+        "currency": "UZS",
+        "url": "https://hh.ru/vacancy/120354415"
+    }
 ]
