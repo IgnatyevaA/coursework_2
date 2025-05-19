@@ -1,15 +1,6 @@
 from src.api import HeadHunterAPI
 from src.savers import JSONSaver
-from src.vacancy import Vacancy
-
-def filter_vacancies_by_keyword(vacancies: list[Vacancy], keyword: str) -> list[Vacancy]:
-    return [v for v in vacancies if keyword.lower() in str(v).lower()]
-
-def filter_vacancies_by_salary(vacancies: list[Vacancy], min_salary: int) -> list[Vacancy]:
-    return [v for v in vacancies if v.to_dict()["salary_from"] >= min_salary]
-
-def sort_vacancies_by_salary(vacancies: list[Vacancy]) -> list[Vacancy]:
-    return sorted(vacancies, reverse=True)
+from src.utils import filter_vacancies_by_keyword, filter_vacancies_by_salary, sort_vacancies_by_salary
 
 def main():
     api = HeadHunterAPI()

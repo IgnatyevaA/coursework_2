@@ -3,14 +3,56 @@ import requests
 from src.vacancy import Vacancy
 
 class JobAPI(ABC):
+    """
+    Абстрактный класс для работы с API сервиса с вакансиями.
+    """
+    @abstractmethod
+    def connect(self):
+        """
+        Подключение к API.
+        """
+        pass
+
     @abstractmethod
     def get_vacancies(self, keyword: str, per_page: int = 20) -> list[Vacancy]:
+        """
+        Получение вакансий.
+
+        :param keyword: Ключевое слово для поиска.
+        :param per_page: Количество вакансий на странице.
+        :return: Список вакансий.
+        """
         pass
 
 class HeadHunterAPI(JobAPI):
+    """
+    Класс для работы с API hh.ru.
+    """
     __base_url = "https://api.hh.ru/vacancies"
 
+    def connect(self):
+        """
+        Подключение к API hh.ru.
+        """
+        try:
+            response = requests.get(self.__base_url)
+            response.raise_for_status()
+            return True
+        except requests.RequestException as e:
+            print(f"Ошибка при подключении к API HH: {e}")
+            return False
+
     def get_vacancies(self, keyword: str, per_page: int = 20) -> list[Vacancy]:
+        """
+        Получение вакансий с hh.ru.
+
+        :param keyword: Ключевое слово для поиска.
+        :param per_page: Количество вакансий на странице.
+        :return: Список вакансий.
+        """
+        if not self.connect():
+            return []
+
         params = {
             "text": keyword,
             "per_page": per_page,
@@ -27,6 +69,12 @@ class HeadHunterAPI(JobAPI):
 
     @staticmethod
     def __parse_vacancy(data: dict) -> Vacancy:
+        """
+        Преобразование данных вакансии в объект Vacancy.
+
+        :param data: Данные вакансии.
+        :return: Объект Vacancy.
+        """
         salary_data = data.get("salary")
         if salary_data is None:
             salary_data = {}
