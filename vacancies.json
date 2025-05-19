@@ -1,0 +1,82 @@
+[
+    {
+        "title": "Аналитик данных (BI-аналитик)",
+        "company": "Эксперт ремонта",
+        "salary_from": 0,
+        "salary_to": 0,
+        "currency": "Не указано",
+        "url": "https://hh.ru/vacancy/120252523"
+    },
+    {
+        "title": "Testing Engineer (manual) / Инженер по тестированию",
+        "company": "Headliner",
+        "salary_from": 0,
+        "salary_to": 0,
+        "currency": "Не указано",
+        "url": "https://hh.ru/vacancy/120683760"
+    },
+    {
+        "title": "Python Developer Middle / Middle+",
+        "company": "Каспи Софтвер",
+        "salary_from": 0,
+        "salary_to": 0,
+        "currency": "Не указано",
+        "url": "https://hh.ru/vacancy/120464105"
+    },
+    {
+        "title": "Ведущий аналитик",
+        "company": "UP business",
+        "salary_from": 180000,
+        "salary_to": 0,
+        "currency": "RUR",
+        "url": "https://hh.ru/vacancy/120633700"
+    },
+    {
+        "title": "Тестировщик / QA инженер",
+        "company": "ВойсЛинк",
+        "salary_from": 0,
+        "salary_to": 0,
+        "currency": "Не указано",
+        "url": "https://hh.ru/vacancy/120667125"
+    },
+    {
+        "title": "Backend-разработчик",
+        "company": "PHEONIX GROUP",
+        "salary_from": 0,
+        "salary_to": 0,
+        "currency": "Не указано",
+        "url": "https://hh.ru/vacancy/120587381"
+    },
+    {
+        "title": "Backend-разработчик / Backend Developer",
+        "company": "ТД ГраСС",
+        "salary_from": 100000,
+        "salary_to": 0,
+        "currency": "RUR",
+        "url": "https://hh.ru/vacancy/120609206"
+    },
+    {
+        "title": "Тестировщик ПО (QA)",
+        "company": "RocketCloud",
+        "salary_from": 0,
+        "salary_to": 0,
+        "currency": "Не указано",
+        "url": "https://hh.ru/vacancy/120664476"
+    },
+    {
+        "title": "Web-программист - стажер",
+        "company": "Autodata",
+        "salary_from": 0,
+        "salary_to": 0,
+        "currency": "Не указано",
+        "url": "https://hh.ru/vacancy/118711736"
+    },
+    {
+        "title": "QA инженер (Кольцово, Новосибирск)",
+        "company": "Лантан",
+        "salary_from": 0,
+        "salary_to": 0,
+        "currency": "Не указано",
+        "url": "https://hh.ru/vacancy/120671312"
+    }
+]
